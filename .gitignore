@@ -9,12 +9,6 @@ tmp/
 Results/
 # Simulations tests directory
 Test/
-# Matlab plot directory
-Matlab/
-# python plot directory
-python-plot/
-# Mathematica plot directory
-mathematica-plot
 # Binary and object files directories
 bin/
 obj/
