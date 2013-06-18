@@ -3,13 +3,11 @@
 #include <math.h>
 using namespace std;
 
-#define DEBUG
-
 double & PrescribedField::operator()(Vector<int> component)
 {
   for(unsigned int d=0;d<m_r_len;d++) if(component[d] > m_r[d] || component[d] < -1)
 					{
-					  cout << "received m_r["<<d<<"] = " << m_r[d] << " expected -1 <= m_r[d] <= " << m_r[d] << endl;
+					  cout << "received m_r["<<d<<"] = " << component[d] << " expected -1 <= m_r[d] <= " << m_r[d] << endl;
 					  throw invalid_argument("In PrescribedField::operator()");
 					}
 

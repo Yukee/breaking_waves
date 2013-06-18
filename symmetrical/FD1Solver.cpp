@@ -202,7 +202,7 @@ void FD1Solver::compute_source_term()
 void FD1Solver::copy_boundaries()
 {
   for(int it=0;it<m_nxSteps[0];++it) m_un[0](it*m_b[0]-m_b[1]) = m_un[0](it*m_b[0]);
-  for(int it=0;it<m_nxSteps[0];++it) m_un[0](it*m_b[0]+(m_nxSteps[1]+1)*m_b[1]) = m_un[0](it*m_b[0]+m_nxSteps[1]*m_b[1]);
+  for(int it=0;it<m_nxSteps[0];++it) m_un[0](it*m_b[0]+m_nxSteps[1]*m_b[1]) = m_un[0](it*m_b[0]+(m_nxSteps[1]-1)*m_b[1]);
 } // Copy un value at the south and north; this is specific to this pb
 
 //the flux gradient may be infinite, if you take a too large time step.

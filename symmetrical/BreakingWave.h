@@ -17,11 +17,11 @@ double u(double z)
 double phi0(double x, double z)
 {
   double phi0 = 0;
-  double bound = Hup - (1/0.8)*(x + xa); 
+  double bound = 0.5*(Hup + Hdown - ((Hup - Hdown)/xa)*x); 
   
   if(x <= -xa && z <= Hup) phi0 = 1;
-  else if(x > -xa && x <= xa && z <= bound) phi0 = 1;
-  else if(x > xa && z <= Hdown) phi0 = 1;
+  if(x > -xa && x <= xa && z <= bound) phi0 = 1;
+  if(x > xa && z <= Hdown) phi0 = 1;
 
   return phi0;
 }

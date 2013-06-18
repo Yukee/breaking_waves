@@ -3,8 +3,6 @@
 #include <math.h>
 using namespace std;
 
-#define DEBUG
-
 ScalarField::ScalarField()
 {
   m_r = Vector<int>(2,1);

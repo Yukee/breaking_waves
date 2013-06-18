@@ -40,10 +40,10 @@ int main(int argc, char *argv[])
    
    Vector<double> dx (2); Vector<double> xi (2); Vector<double> llc (2); double endtime; double timestep; double timebtwfiles; string filename;
    //cout << "Enter cell width dx:"; cin >> dx[0];
-   dx[0] = 0.05;
+   dx[0] = 0.01;
    
    //cout << "Enter cell heigh dz:"; cin >> dx[1];
-   dx[1] = 0.01;
+   dx[1] = 0.0033333;
    
    //cout << "Enter domain width:"; cin >> xi[0];
    xi[0] = 3;
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
    
    // Compute the time evolution
    
-   //tsolv.get_solution(filename, timebtwfiles);
+   tsolv.get_solution(filename, timebtwfiles);
 
    return 0;
 }
