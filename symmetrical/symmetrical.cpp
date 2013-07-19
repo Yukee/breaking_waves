@@ -43,11 +43,11 @@ int main(int argc, char *argv[])
    dx[0] = 0.01;
    
    //cout << "Enter cell heigh dz:"; cin >> dx[1];
-   dx[1] = 0.0033333;
+   dx[1] = 0.005;
    
    //cout << "Enter domain width:"; cin >> xi[0];
-   xi[0] = 3;
-   xi[1] = 1; llc[0] = -xi[0]/2; llc[1] = 0;
+   xi[0] = 3+dx[0];
+   xi[1] = 1+dx[1]+0.001; llc[0] = -(xi[0]-dx[0])/2; llc[1] = 0;
    
    cout << "Enter end time:"; cin >> endtime;
    
